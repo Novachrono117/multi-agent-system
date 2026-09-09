@@ -1,0 +1,10 @@
+{"event": "run_started", "mode": "pasted", "run_id": "20260909T201716-e041b1", "transport": "offline", "ts": "2026-09-09T20:17:16.668507+00:00"}
+{"event": "intake", "mode": "pasted", "postings": 1, "run_id": "20260909T201716-e041b1", "ts": "2026-09-09T20:17:16.671013+00:00"}
+{"event": "handoff", "posting": "pasted:pasted-1", "reason": "offline demo: no assessment for this posting yet", "run_id": "20260909T201716-e041b1", "source": "deterministic", "to": "fit_screener", "ts": "2026-09-09T20:17:16.671013+00:00"}
+{"event": "tool_call", "latency_ms": 0, "node": "fit_screener", "ok": true, "run_id": "20260909T201716-e041b1", "tool": "parse_job_posting", "ts": "2026-09-09T20:17:16.672574+00:00"}
+{"event": "tool_call", "latency_ms": 1, "node": "fit_screener", "ok": true, "run_id": "20260909T201716-e041b1", "tool": "score_profile_match", "ts": "2026-09-09T20:17:16.673580+00:00"}
+{"coverage": 0.7143, "event": "assessed", "posting": "pasted:pasted-1", "run_id": "20260909T201716-e041b1", "source": "deterministic", "ts": "2026-09-09T20:17:16.674580+00:00", "verdict": "worth_applying"}
+{"event": "handoff", "posting": "pasted:pasted-1", "reason": "offline demo: assessment looks worth a brief", "run_id": "20260909T201716-e041b1", "source": "deterministic", "to": "brief_writer", "ts": "2026-09-09T20:17:16.674580+00:00"}
+{"event": "brief_written", "posting": "pasted:pasted-1", "run_id": "20260909T201716-e041b1", "source": "deterministic", "ts": "2026-09-09T20:17:16.675580+00:00"}
+{"event": "handoff", "posting": null, "reason": "every posting has been assessed and briefed where warranted", "run_id": "20260909T201716-e041b1", "source": "deterministic", "to": "finalize", "ts": "2026-09-09T20:17:16.675580+00:00"}
+{"event": "run_finished", "input_tokens": 0, "output_tokens": 0, "reason": "1 brief(s) drafted for review", "run_id": "20260909T201716-e041b1", "status": "completed", "steps": 5, "ts": "2026-09-09T20:17:16.676579+00:00"}

@@ -1,0 +1,65 @@
+# CI runs the suite with NO API key and NO network reachable to the tests.
+#
+# That is a hard requirement of this project, not a convenience: the demo is
+# manual and costs money, so the automated checks must never depend on a paid
+# key or on a job board being up. `ANTHROPIC_API_KEY` is deliberately absent
+# from this file, and tests/conftest.py severs httpx so that a test reaching
+# for the network fails rather than silently starting to bill someone.
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+          cache-dependency-glob: uv.lock
+
+      - name: Set up Python
+        run: uv python install 3.12
+
+      - name: Install dependencies
+        run: uv sync --locked
+
+      - name: Lint
+        run: uv run ruff check .
+
+      - name: Format check
+        run: uv run ruff format --check .
+
+      - name: Tests
+        run: uv run pytest -q
+
+      # Proves the promise in the README: the demo runs with no key, no model
+      # and no network. If this step fails, the README is lying.
+      - name: Offline demo
+        run: uv run python -m jobfit run --offline --posting examples/posting_sample.txt
+
+      - name: No secrets tracked
+        run: |
+          # Narrow on purpose. The pattern suggested in the original plan
+          # (\.env|key|token) matches .env.example and the legitimate
+          # `board_tokens` field, so it would fail on a clean repository and
+          # then be ignored - a check that cries wolf is worse than none.
+          if git ls-files | grep -E '^\.env$|\.pem$|_secret'; then
+            echo "::error::a secret-looking file is tracked"
+            exit 1
+          fi
+          echo "no secrets tracked"

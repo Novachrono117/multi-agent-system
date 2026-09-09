@@ -1,0 +1,86 @@
+{
+  "jobs": [
+    {
+      "absolute_url": "https://job-boards.greenhouse.io/arcoeducacao/jobs/6129177004",
+      "data_compliance": [
+        {
+          "type": "gdpr",
+          "requires_consent": false,
+          "requires_processing_consent": false,
+          "requires_retention_consent": false,
+          "retention_period": null,
+          "demographic_data_consent_applies": false
+        }
+      ],
+      "internal_job_id": 5193029004,
+      "location": {
+        "name": "São Paulo"
+      },
+      "metadata": null,
+      "id": 6129177004,
+      "updated_at": "2026-08-19T07:08:36-04:00",
+      "requisition_id": "4194",
+      "title": "Advogado Sênior - Contencioso",
+      "company_name": "Arco Educação ",
+      "first_published": "2026-07-29T13:39:09-04:00",
+      "language": "pt",
+      "application_deadline": null
+    },
+    {
+      "absolute_url": "https://job-boards.greenhouse.io/arcoeducacao/jobs/6127956004",
+      "data_compliance": [
+        {
+          "type": "gdpr",
+          "requires_consent": false,
+          "requires_processing_consent": false,
+          "requires_retention_consent": false,
+          "retention_period": null,
+          "demographic_data_consent_applies": false
+        }
+      ],
+      "education": "education_required",
+      "internal_job_id": 5192389004,
+      "location": {
+        "name": "Remoto"
+      },
+      "metadata": null,
+      "id": 6127956004,
+      "updated_at": "2026-08-19T07:08:36-04:00",
+      "requisition_id": "4186",
+      "title": "AI Engineer I",
+      "company_name": "Arco Educação ",
+      "first_published": "2026-07-30T14:39:35-04:00",
+      "language": "pt",
+      "application_deadline": null
+    },
+    {
+      "absolute_url": "https://job-boards.greenhouse.io/arcoeducacao/jobs/6117930004",
+      "data_compliance": [
+        {
+          "type": "gdpr",
+          "requires_consent": false,
+          "requires_processing_consent": false,
+          "requires_retention_consent": false,
+          "retention_period": null,
+          "demographic_data_consent_applies": false
+        }
+      ],
+      "internal_job_id": 5188404004,
+      "location": {
+        "name": "Remoto"
+      },
+      "metadata": null,
+      "id": 6117930004,
+      "updated_at": "2026-08-19T07:08:36-04:00",
+      "requisition_id": "4159",
+      "title": "Analista de Atendimento I Cobrança - Temporário (03 meses)",
+      "company_name": "Arco Educação ",
+      "first_published": "2026-07-17T11:17:14-04:00",
+      "language": "pt",
+      "application_deadline": null
+    }
+  ],
+  "meta": {
+    "total": 97
+  }
+}

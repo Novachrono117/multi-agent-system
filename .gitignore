@@ -1,0 +1,37 @@
+# secrets - never tracked
+.env
+*.pem
+*_secret*
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+
+# tooling
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# runtime artifacts
+.cache/
+*.log
+
+# os / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# a real candidate profile is local-only - see configs/profile.example.toml
+configs/profile.toml
+
+# Local planning notes. PLANO.md contains the candidate's job-search strategy,
+# named companies, salary figures, and an audit of which CV claims were not yet
+# supported by code. None of that belongs in a public repository - the repo is
+# meant to show the work, not the private reasoning behind it.
+PLANO.md

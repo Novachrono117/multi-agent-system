@@ -1,0 +1,35 @@
+Backend Engineer (Python) - Remote
+
+About the role
+
+We are a small product team building internal tools that reduce manual work
+for our operations staff. You will own services end to end, from API design
+through to the dashboards people use every day.
+
+What you will do
+
+- Design and build REST APIs in Python, primarily with FastAPI
+- Model data in PostgreSQL and keep migrations sane
+- Package services with Docker and ship them through CI
+- Write tests that let us refactor without fear
+- Work with the front-end engineer on React dashboards
+
+What we are looking for
+
+- 2+ years of Python in production
+- Solid understanding of REST API design and HTTP
+- Comfortable with PostgreSQL and writing real SQL
+- Experience with Docker and a CI system such as GitHub Actions
+- Testing discipline with pytest or similar
+
+Nice to have
+
+- Exposure to LLM APIs, retrieval or embeddings
+- Kubernetes for our staging cluster
+- Terraform and infrastructure as code
+- Basic cloud deployment experience
+
+How we work
+
+Fully remote, asynchronous by default, with a weekly team call. Code review is
+required on every change and we pair when something is hard.

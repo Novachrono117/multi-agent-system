@@ -1,0 +1,60 @@
+# Example candidate profile - fictional, committed as a format reference.
+#
+# Copy it and edit for real use:
+#     cp configs/profile.example.toml configs/profile.toml
+#
+# configs/profile.toml is gitignored. That is on purpose: a real profile's
+# `never_claim` list is an honest inventory of your gaps, and a public
+# repository is the wrong place for it. The pipeline reads whichever file you
+# point it at; nothing about the example is special.
+
+[profile]
+headline = "Full-stack engineer moving into applied AI"
+location = "Remote (UTC-3)"
+seniority = "mid"
+years_experience = 4.0
+
+# Verified skills. The only pool an assessment may draw evidence from - if it
+# is not here, no output may claim it.
+skills = [
+    "Python",
+    "FastAPI",
+    "Pydantic",
+    "PostgreSQL",
+    "Docker",
+    "GitHub Actions",
+    "pytest",
+    "React",
+    "REST APIs",
+    "RAG",
+    "embeddings",
+    "vector databases",
+    "LangChain",
+]
+
+# Requirements whose absence rules this candidate out of a posting.
+deal_breakers = [
+    "onsite outside the candidate's metro area",
+    "5+ years of commercial experience required",
+    "senior or lead title",
+    "Java or C# as the primary language",
+]
+
+# Tracks deliberately not pursued. A preference, not a gap.
+avoid_tracks = [
+    "mobile development",
+]
+
+# Things this candidate does NOT have. No output may assert these, and they
+# propagate into the brief's `not_claimable` list so you know what to steer
+# away from in an interview.
+never_claim = [
+    "Kubernetes",
+    "cloud deployment (AWS/GCP/Azure compute)",
+    "infrastructure as code",
+    "fine-tuning or LoRA",
+    "Spark or Databricks",
+    "Go",
+]
+
+languages = ["Portuguese (native)", "English (advanced)"]
